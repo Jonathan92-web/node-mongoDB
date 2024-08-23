@@ -16,6 +16,9 @@ mongoose
 app.use(express.urlencoded({ extended: false }));
 
 //configurar rutas
+app.get("/", function (req, res) {
+  res.send("Hola desde Vercel");
+});
 app.use("/products", productRoutes);
 app.use("/sales", salesRoutes);
 
