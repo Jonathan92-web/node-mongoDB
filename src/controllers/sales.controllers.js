@@ -5,7 +5,7 @@ const salesController = {
   list: async function (req, res) {
     try {
       const sale = await Sale.find();
-      res.status(200).json({ sales: sales });
+      res.status(200).json({ sale: sale });
     } catch (error) {
       res.status(500).json(error);
     }
