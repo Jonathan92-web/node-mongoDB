@@ -3,24 +3,24 @@ const Product = require("../models/product.model");
 
 /**
  * @route POST /products
- * @group Products - Operations about products
- * @param {Product.model} product.body.required - The product to create.
- * @returns {string} 200 - "created"
+ * @group Productos - Operaciones sobre productos
+ * @param {Producto.model} product.body.required - El producto a crear.
+ * @returns {string} 200 - "creado"
  * @returns {string} 500 - "error"
  */
 Router.post(
   "/",
   /**
-   * Create a new product.
-   * @param {import('express').Request} req - The Express request object.
-   * @param {import('express').Response} res - The Express response object.
+   * Crea un nuevo producto.
+   * @param {import('express').Request} req - El objeto de solicitud de Express.
+   * @param {import('express').Response} res - El objeto de respuesta de Express.
    * @returns {void}
    */
   async function (req, res) {
     try {
       const product = new Product(req.body);
       await product.save();
-      res.status(200).json("created");
+      res.status(200).json("creado");
     } catch (err) {
       res.status(500).json("error");
     }
@@ -29,16 +29,16 @@ Router.post(
 
 /**
  * @route GET /products
- * @group Products - Operations about products
- * @returns {Array.<Product>} 200 - An array of products.
+ * @group Productos - Operaciones sobre productos
+ * @returns {Array.<Producto>} 200 - Un arreglo de productos.
  * @returns {string} 500 - "error"
  */
 Router.get(
   "/",
   /**
-   * Get a list of all products.
-   * @param {import('express').Request} req - The Express request object.
-   * @param {import('express').Response} res - The Express response object.
+   * Obtiene una lista de todos los productos.
+   * @param {import('express').Request} req - El objeto de solicitud de Express.
+   * @param {import('express').Response} res - El objeto de respuesta de Express.
    * @returns {void}
    */
   async function (req, res) {

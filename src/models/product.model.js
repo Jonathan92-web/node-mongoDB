@@ -2,21 +2,21 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 /**
- * @typedef {object} Product
- * @property {string} ref - The reference of the product.
- * @property {string} price - The price of the product.
- * @property {string} description - The description of the product.
- * @property {boolean} isAvailable - Whether the product is available or not.
+ * @typedef {object} Producto
+ * @property {string} ref - La referencia del producto.
+ * @property {number} price - El precio del producto.
+ * @property {string} description - La descripción del producto.
+ * @property {boolean} isAvailable - Si el producto está disponible o no.
  */
 
 /**
- * Mongoose schema for a product.
+ * Esquema de Mongoose para un producto.
  * @type {mongoose.Schema}
  */
 const Product = new Schema({
   ref: String,
-  price: String,
-description: String,
+  price: Number,
+  description: String,
   isAvailable: Boolean,
 });
 

@@ -3,15 +3,15 @@ const { default: mongoose } = require("mongoose");
 const Schema = require("mongoose").Schema;
 
 /**
- * @typedef {object} Sale
- * @property {number} quantity - The quantity of the sale.
- * @property {Date} date - The date of the sale.
- * @property {string} product - The product of the sale.
- * @property {number} total - The total of the sale.
+ * @typedef {object} Venta
+ * @property {number} quantity - La cantidad de la venta.
+ * @property {Date} date - La fecha de la venta.
+ * @property {string} product - El producto de la venta.
+ * @property {number} total - El total de la venta.
  */
 
 /**
- * Mongoose schema for a sale.
+ * Esquema de Mongoose para una venta.
  * @type {mongoose.Schema}
  */
 const Sale = new Schema({

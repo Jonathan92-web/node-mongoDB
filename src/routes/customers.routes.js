@@ -3,16 +3,16 @@ const customerSuscriptionController = require("../controllers/customers-suscript
 
 /**
  * @route POST /customers/suscription
- * @group Customers - Operations about customers
- * @param {CustomerSubscription.model} customer.body.required - The customer to create.
- * @returns {CustomerSubscription.model} 200 - The created customer.
+ * @group Clientes - Operaciones sobre clientes
+ * @param {CustomerSubscription.model} customer.body.required - El cliente a crear.
+ * @returns {CustomerSubscription.model} 200 - El cliente creado.
  * @returns {string} 500 - "error"
  */
 miRouter.post("/suscription", customerSuscriptionController.guardarCliente);
 /**
  * @route GET /customers/obtenerclientes
- * @group Customers - Operations about customers
- * @returns {Array.<CustomerSubscription>} 200 - An array of customers.
+ * @group Clientes - Operaciones sobre clientes
+ * @returns {Array.<CustomerSubscription>} 200 - Un arreglo de clientes.
  * @returns {string} 500 - "error"
  */
 miRouter.get("/obtenerclientes", customerSuscriptionController.obtenerClientes);

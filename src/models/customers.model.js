@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const customerSuscription = mongoose.Schema;
 
 /**
- * @typedef {object} CustomerSubscription
- * @property {string} email - The email of the customer.
- * @property {Date} subscription_date - The date of the subscription.
+ * @typedef {object} SuscripcionCliente
+ * @property {string} email - El email del cliente.
+ * @property {Date} suscription_date - La fecha de la suscripción.
  */
 
 /**
- * Mongoose schema for a customer subscription.
+ * Esquema de Mongoose para la suscripción de un cliente.
  * @type {mongoose.Schema}
  */
 const customerSuscriptionSchema = new customerSuscription({

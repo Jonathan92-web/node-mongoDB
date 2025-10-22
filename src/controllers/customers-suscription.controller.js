@@ -2,9 +2,9 @@ const customerSuscriptionModel = require("../models/customers.model");
 
 const customerSuscriptionController = {
   /**
-   * Save a new customer.
-   * @param {import('express').Request} req - The Express request object.
-   * @param {import('express').Response} res - The Express response object.
+   * Guarda un nuevo cliente.
+   * @param {import('express').Request} req - El objeto de solicitud de Express.
+   * @param {import('express').Response} res - El objeto de respuesta de Express.
    * @returns {void}
    */
   guardarCliente: async function (req, res) {
@@ -13,13 +13,13 @@ const customerSuscriptionController = {
     res.status(200).json(customer);
   },
   /**
-   * Get a list of all customers.
-   * @param {import('express').Request} req - The Express request object.
-   * @param {import('express').Response} res - The Express response object.
+   * Obtiene una lista de todos los clientes.
+   * @param {import('express').Request} req - El objeto de solicitud de Express.
+   * @param {import('express').Response} res - El objeto de respuesta de Express.
    * @returns {void}
    */
   obtenerClientes: async function (req, res) {
-    //en una sola de linea regreso todos los clientes que hay en la base de datos
+    // En una sola línea, devuelve todos los clientes de la base de datos.
     res.status(200).json(await customerSuscriptionModel.find());
   },
 };
