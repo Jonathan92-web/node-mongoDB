@@ -2,6 +2,12 @@ const Sale = require("../models/sale.model");
 const Product = require("../models/product.model");
 
 const salesController = {
+  /**
+   * Get a list of all sales.
+   * @param {import('express').Request} req - The Express request object.
+   * @param {import('express').Response} res - The Express response object.
+   * @returns {void}
+   */
   list: async function (req, res) {
     try {
       const sale = await Sale.find();
@@ -10,6 +16,12 @@ const salesController = {
       res.status(500).json(error);
     }
   },
+  /**
+   * Create a new sale.
+   * @param {import('express').Request} req - The Express request object.
+   * @param {import('express').Response} res - The Express response object.
+   * @returns {void}
+   */
   create: async function (req, res) {
     try {
       const sale = new Sale(req.body);
